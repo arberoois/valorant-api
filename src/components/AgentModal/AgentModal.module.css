@@ -1,0 +1,58 @@
+.modal{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.809);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal > div{
+    display: flex;
+    background-color: blue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.leftSide{
+    display: inline-block;
+    max-width: 400px;
+    height: 50%;
+}
+.leftSide > img{
+    object-fit: cover;
+    height: auto;
+    width: auto;
+}
+/* 
+.abilities {
+    text-align: center;
+    background-color: #042e27ee;
+}
+
+.ability {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.ability p {
+    color: #b78460;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.ability img {
+    height: 50px;
+    margin: 10px 0 20px 0;
+}
+
+.ability span {
+    color: #b38c8f;
+}
+ */
