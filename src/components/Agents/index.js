@@ -1,17 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./index.css";
 import Agent from "../Agent";
-const Agents = () => {
-  const [agents, setAgents] = useState([]);
+import useAgents from "../../hooks/useAgents";
 
-  useEffect(() => {
-    fetch("https://valorant-api.com/v1/agents?isPlayableCharacter=true")
-      .then((response) => response.json())
-      .then(({ data }) => {
-        setAgents(data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+const Agents = () => {
+  const { agents } = useAgents();
+
   return (
     <>
       <h1>Valorant API</h1>
