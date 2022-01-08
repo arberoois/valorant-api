@@ -1,0 +1,58 @@
+.agent {
+    background-color: #042e27;
+    text-align: center;
+    box-shadow: 0px 0px 10px black;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.agent h1 {
+    font-size: 16px;
+    color: #042e27;
+    text-align: center;
+}
+
+.agent img {
+    height: 350px;
+}
+
+.agent p {
+    margin: 10px;
+    color: #b78460;
+}
+
+h3 {
+    color: #b38c8f;
+}
+h2 {
+    color: #dc3d4b;
+    text-shadow: 0px 0px 5px black;
+}
+
+.abilities {
+    text-align: center;
+    background-color: #042e27ee;
+}
+
+.ability {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.ability p {
+    color: #b78460;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.ability img {
+    height: 50px;
+    margin: 10px 0 20px 0;
+}
+
+.ability span {
+    color: #b38c8f;
+}
