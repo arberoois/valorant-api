@@ -13,9 +13,9 @@ export const Agents = () => {
     }
   )
 
-  useEffect(() => {
-    getAgents(setAgents)
-  }, []);
+  useEffect(() => 
+     getAgents(setAgents)
+  , []);
 
   return (
     <>

@@ -10,7 +10,7 @@ export const Agent = ({ agent, setModal }) => {
 
   return (
     <div className={styles.agent} onClick={handleOpen}>
-      <h2>{agent.developerName}</h2>
+      <h2>{agent.displayName}</h2>
       <img src={agent.fullPortrait} alt={agent.developerName} />
     </div>
   )

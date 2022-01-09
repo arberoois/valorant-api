@@ -1,5 +1,6 @@
-export const getAgents = (setAgents) => {
+import React, {useState} from 'react'
 
+export const getAgents = (setAgents) => {
     fetch("https://valorant-api.com/v1/agents?isPlayableCharacter=true")
         .then((response) => response.json())
         .then(({ data }) => {
@@ -8,3 +9,4 @@ export const getAgents = (setAgents) => {
         .catch((error) => console.log(error))
 
 }
+
