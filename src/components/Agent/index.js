@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from "@mui/material/Modal";
+import CloseIcon from "@mui/icons-material/Close";
 import "./index.css";
 
 const Agent = ({ agent }) => {
@@ -7,28 +8,18 @@ const Agent = ({ agent }) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const style = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 400,
-    height: 800,
-    overflowY: "scroll",
-    bgcolor: "background.paper",
-    border: "2px solid #000",
-    boxShadow: 24,
-    p: 10,
-    outline: "none",
-  };
-
   return (
     <div className="agent" onClick={handleOpen}>
       <h2>{agent.developerName}</h2>
       <img src={agent.fullPortrait} alt={agent.developerName} />
       <p>{agent.description}</p>
       <Modal open={open} onClose={handleClose}>
-        <div className="abilities" style={style}>
+        <div className="abilities modal">
+          {open && (
+            <div className="close" onClick={() => setOpen(false)}>
+              <CloseIcon />
+            </div>
+          )}
           <h2>{agent.developerName}</h2>
           {agent.abilities &&
             agent.abilities.map((ability) => {

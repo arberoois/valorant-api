@@ -56,3 +56,31 @@ h2 {
 .ability span {
     color: #b38c8f;
 }
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 800px;
+    overflow-y: scroll;
+    background-color: #042e27ee;
+    padding: 10px;
+    outline: none;
+}
+
+.close {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.close svg {
+    color: #dc3d4b;
+    font-size: 28px;
+    cursor: pointer;
+    margin: 5px;
+}
