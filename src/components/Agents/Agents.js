@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styles from './Agents.module.css'
 import { Agent } from "../Agent/Agent"
-import { getAgents } from "../../hooks/getAgents";
+import { getAgents } from "../../services/getAgents";
 import { AgentModal } from "../AgentModal/AgentModal";
 
 export const Agents = () => {
