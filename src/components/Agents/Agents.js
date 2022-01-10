@@ -1,32 +1,32 @@
-import React, { useState, useEffect } from "react"
-import styles from './Agents.module.css'
-import { Agent } from "../Agent/Agent"
+import React, { useState, useEffect } from "react";
+import styles from "./Agents.module.css";
+import { Agent } from "../Agent/Agent";
 import { getAgents } from "../../services/getAgents";
 import { AgentModal } from "../AgentModal/AgentModal";
 
 export const Agents = () => {
+  const [agents, setAgents] = useState([]);
+  const [modal, setModal] = useState({
+    isOpen: false,
+  });
 
-  const [agents, setAgents] = useState([])
-  const [modal, setModal] = useState(
-    {
-      isOpen: false,
-    }
-  )
-
-  useEffect(() => 
-     getAgents(setAgents)
-  , []);
+  useEffect(() => {
+    getAgents().then((data) => setAgents(data));
+  }, []);
 
   return (
     <>
-      {modal.isOpen ? <AgentModal agent={modal.agent} setModal={setModal} /> : ''}
+      {modal.isOpen ? (
+        <AgentModal agent={modal.agent} setModal={setModal} />
+      ) : (
+        ""
+      )}
       <div className={styles.container}>
         {agents &&
           agents.map((agent) => {
-            return <Agent key={agent.uuid} agent={agent} setModal={setModal} />
+            return <Agent key={agent.uuid} agent={agent} setModal={setModal} />;
           })}
       </div>
     </>
   );
 };
-
