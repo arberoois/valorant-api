@@ -1,9 +1,10 @@
 import React from "react";
-import Agents from "./components/Agents";
+import { AgentsPage } from "./pages/Agents";
+
 function App() {
   return (
     <div className="App">
-      <Agents />
+      <AgentsPage />
     </div>
   );
 }
