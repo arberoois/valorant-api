@@ -3,6 +3,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Valorant";
+  background-color: rgb(36, 31, 31);
+
 }
 
 @font-face {
